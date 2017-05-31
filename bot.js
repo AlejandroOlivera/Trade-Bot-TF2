@@ -120,3 +120,54 @@ function processTradeOffer(offer) {
        }
      }
    }
+ function acceptTradeOffer(offer) {
+		 //Aceptamos la oferta y analizamos la respuesta
+	 
+	   offer.accept(false, function(error, status) {
+	
+	     if(error) {
+	       console.log(`\nError: No se pudo aceptar la oferta #${offer.id}\n`);
+	       console.log(error);
+	       return;
+	     }
+	 
+	     else if(status === 'pending') {
+	       console.log(`Estado : La oferta #${offer.id} ha sido aceptada pero necesita confirmarse`);
+	 
+	     community.acceptConfirmationForObject(config.identity_secret, offer.id, function(error) {
+	 
+	          if(error) {
+	 
+	           return;
+	         }
+	      
+	         else {
+	           console.log(`Estado : La oferta #${offer.id} ha sido confirmada`.green);
+	           return;
+	         }
+	       });
+	     }
+	 
+	     else {
+	       console.log(`Estado : La oferta #${offer.id} ha sido aceptada`.green);
+	       return;
+	     }
+	   });
+	 }
+	 function declineTradeOffer(offer) {
+//Recahazamos la oferta y logeamos el error.
+  offer.decline(function(error) {
+
+    if(error) {
+      console.log(`\nError: No se pudo rechazar la oferta, intentando de nuevo.. #${offer.id}\n`);
+      console.log(error);
+      return;
+    }
+
+    else {
+      console.log(`Estado: La oferta #${offer.id} fue rechazada`);
+      return;
+    }
+  });
+}
+
