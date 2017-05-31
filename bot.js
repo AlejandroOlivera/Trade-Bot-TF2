@@ -6,7 +6,7 @@ const TradeOfferManager = require('steam-tradeoffer-manager');
 
 var colors = require('colors');
 var Prices = require('./Precios.json');
-var config = require('./config.json');
+var config = require('./config');
 
 // Creamos y nombramos una nueva instancia de dos Modulos
 const community = new SteamCommunity();
