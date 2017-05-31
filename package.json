@@ -1,0 +1,19 @@
+{
+  "name": "SteamBot",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "steam-totp": "^1.4.0",
+    "steam-tradeoffer-manager": "^2.7.2",
+    "steamcommunity": "^3.30.7",
+    "steam-user": "^3.19.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

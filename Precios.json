@@ -1,0 +1,37 @@
+{
+  "Scrap Metal":
+  {
+    "compra" : 1,
+    "venta": 1
+  },
+
+  "Reclaimed Metal":
+  {
+    "compra" : 3,
+    "venta": 3
+  },
+
+  "Refined Metal":
+  {
+    "compra" : 9,
+    "venta": 9
+  },
+
+  "The Conscientious Objector":
+  {
+    "compra" : 5,
+    "venta": 6
+  },
+
+  "The Freedom Staff":
+  {
+    "compra" : 2,
+    "venta": 3
+  },
+
+  "Wanga Prick":
+  {
+    "compra" : 2,
+    "venta": 3
+  }
+}
