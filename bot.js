@@ -97,7 +97,7 @@ function processTradeOffer(offer) {
     // For para analizar cada item que vamos a recibir
        for(var i in itemsARecibir) {
 
-				   var item = itemsADar[i].name;
+				   var item = itemsARecibir[i].name;
          if(Precios[item]) {
            valorTotalARecibir += Precios[item].compra;
          }
